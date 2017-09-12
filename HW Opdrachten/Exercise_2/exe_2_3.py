@@ -1,6 +1,6 @@
 #Practice Exercise 2_3 (operator voorrang)
 #1
-eerste = 0 == 1 == 2
+eerste = 0 == (1 == 2)
 print(str(eerste) + "\n")
 
 #2
