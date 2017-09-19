@@ -42,13 +42,38 @@ def ritprijs(leeftijd, weekendrit, afstandKM):
 			return totaal
 # ritprijs einde
 
-
 # hoofdprogramma
-afstandKM = eval(input("Hoeveel kilomter is er gereizd? "))
-weekendrit = input("Is het weekend? ")
-leeftijd = eval(input("Wat is de reizigers leeftijd? "))
+# afstandKM = eval(input("Hoeveel kilometer is er gereizd? "))
+# weekendrit = input("Is het weekend? ")
+# leeftijd = eval(input("Wat is de reizigers leeftijd? "))
 
-bedrag = ritprijs(leeftijd, weekendrit, afstandKM)
+# bedrag = ritprijs(leeftijd, weekendrit, afstandKM)
 
-message = "Het te betalen bedrag is: " + str(bedrag) + " Euro"
-print(message)
+# message = "Het te betalen bedrag is: " + str(bedrag) + " Euro"
+# print(message)
+
+#situaties
+situatie1 = ritprijs(11, 'true', 40)
+print("Het te betalen bedrag is: " + str(situatie1) + " Euro")
+
+situatie2 = ritprijs(11, 'false', 40)
+print("Het te betalen bedrag is: " + str(situatie2) + " Euro")
+
+situatie3 = ritprijs(11, 'true', 60)
+print("Het te betalen bedrag is: " + str(situatie3) + " Euro")
+
+situatie4 = ritprijs(11, 'false', 60)
+print("Het te betalen bedrag is: " + str(situatie4) + " Euro")
+
+
+situatie4 = ritprijs(12, 'true', 40)
+print("Het te betalen bedrag is: " + str(situatie4) + " Euro")
+
+situatie5 = ritprijs(12, 'false', 40)
+print("Het te betalen bedrag is: " + str(situatie5) + " Euro")
+
+situatie6 = ritprijs(12, 'true', 60)
+print("Het te betalen bedrag is: " + str(situatie6) + " Euro")
+
+situatie6 = ritprijs(12, 'false', 60)
+print("Het te betalen bedrag is: " + str(situatie6) + " Euro")
