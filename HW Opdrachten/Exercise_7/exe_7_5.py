@@ -1,8 +1,13 @@
 def namen():
+	namen_dict = {}
 	while True:
-		namen_dict = {}
 		naam = input("Voer naam in: ")
-
-		if naam in namen_dict:
-			namen_dict[nummer] += 1
+		if naam != "":
+			if naam not in namen_dict:
+				namen_dict[naam] = 1
+			else:
+				namen_dict[naam] = namen_dict[naam] + 1
 		else:
+			break
+	print(namen_dict)
+namen()

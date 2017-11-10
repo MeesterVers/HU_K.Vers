@@ -10,6 +10,7 @@ def get_lopers():
 def lopers_gevens(naam):
 	vandaag = datetime.datetime.today() 
 	vandaag = vandaag.strftime("%a %d %b %Y %H:%M:%S")
+	vertrektijd = '11:15'
 
 	outfile = open('hardlopers.txt', 'a')
 	outfile.write('{}, {}\n'.format(vandaag, naam))
@@ -23,3 +24,8 @@ while True:
 		lopers_gevens(lopers_naam)
 	else:
 		break
+
+datum_tijd= datetime.datetime.today() 
+tijd_nu = datum_tijd.strftime("%a %d %b %Y %H:%M:%S")
+vertrektijd = vertrek['VertrekTijd']
+vertrektijd = vertrektijd[tijd_nu]
