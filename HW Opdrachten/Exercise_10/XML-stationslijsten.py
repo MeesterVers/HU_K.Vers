@@ -1,4 +1,5 @@
 import xmltodict
+synomiemenlijst = []
 
 def processXML(filename):
     with open(filename) as myXMLFile:
@@ -15,11 +16,11 @@ for station in stations:
 	
 print('\nDit zijn alls stations met een of meer synomiemen:')
 for station in stations:
-	if station['Synoniemen'] != "":
-		synomiemen = station['Synoniemen']
-		print("{:4} - {}" .format(station['Code'], synomiemen))
+	try:
+		print("{:4} - {}" .format(station['Code'], station['Synoniemen']['Synoniem']))
+	except TypeError:
+		pass
 
 print('\nDit is de lange naam elk station:')
 for station in stations:
-	station_langenaam = station['Namen']
-	print("{:4} - {}" .format(station['Code'], station_langenaam))
+	print("{:4} - {}" .format(station['Code'], station['Namen']['Lang']))
