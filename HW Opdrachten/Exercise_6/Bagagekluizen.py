@@ -108,8 +108,10 @@ def hoofdprogramma():
 				print("Totziens")
 				break
 			else:
-				print("Oops u het ingevoerd getal is geen menu optie")
+				print("Oops het ingevoerd getal is geen menu optie")
 		except NameError:
 			print("Oops u moet alleen het getal van de menu optie invoeren.")
+		except SyntaxError:
+			print("Oops u heeft niets ingevoerd.")
 # eind def hoofdprogramma
 hoofdprogramma()
